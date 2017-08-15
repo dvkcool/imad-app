@@ -19,9 +19,9 @@ var articleOne{
        
              <p> Hello aricle 1  Hello aricle 1 Hello aricle 1 Hello aricle 1 Hello aricle 1 Hello aricle 1 Hello aricle 1 Hello aricle 1 Hello aricle 1 Hello aricle 1
                   Hello aricle 1 Hello aricle 1 Hello aricle 1 Hello aricle 1 Hello aricle 1
-             </p> `
+             </p> `;
              
-}
+};
 function createtemp(data){
     var title=data.title;
     var heading=data.heading;
