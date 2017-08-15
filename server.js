@@ -19,11 +19,11 @@ function createtemp(data){
     var j=0;
     for(var i =0; i<=50; i++){
         if(i%10 ===0 && j%2 ===0){
-            content = content.concat(`<P>`);
+            content = content.concat('<P>');
             j++;
         }
         else if(i%10 ===0){
-            content = content.concat(`</P>`);
+            content = content.concat('</P>');
             j++;
         }
         
