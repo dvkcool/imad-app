@@ -15,6 +15,7 @@ function createtemp(data){
     var heading=data.heading;
     var content= data.content;
     var j=0;
+    var s = content;
     for(var i =0; i<=50; i++){
         if(i%10 ===0 && j%2 ===0){
             content = content + `<P>`;
@@ -26,7 +27,7 @@ function createtemp(data){
         }
         
         else{
-            content= content+ `Hello Artcile 1`;
+            content= content+ s;
         }
         
     }
