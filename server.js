@@ -17,12 +17,12 @@ function createtemp(data){
     var heading=data.heading;
     var content= data.content;
     var j=0;
-    for(var i =0; i<=100; i++){
-        if(i%20 ===0 && j%2 ===0){
+    for(var i =0; i<=50; i++){
+        if(i%10 ===0 && j%2 ===0){
             content = content+`<P>`;
             j++;
         }
-        else if(i%20 ===0){
+        else if(i%10 ===0){
             content = content+`</P>`;
             j++;
         }
