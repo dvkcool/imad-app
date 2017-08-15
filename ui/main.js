@@ -1,7 +1,5 @@
 console.log('Loaded!');
-//new value
-var e= document.getElementById('main-text');
-e.innerHTML='New value';
+
 //moving img
 var img = document.getElementById('madi');
 var marginLeft=0;var c=0;
