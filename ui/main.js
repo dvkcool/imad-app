@@ -14,14 +14,16 @@ function moveRight(){
         marginLeft= marginLeft+1;
          c++;
     }
-    
-    else{
-         
-    }
-    
-    img.style.marginLeft=marginLeft+'px';
+ img.style.marginLeft=marginLeft+'px';
 }
 img.onclick = function () {
    var interval= setInterval(moveRight, 50);
    
+};
+var counter=0;
+var button = document.getElementById('b1');
+b1.onclick= function(){
+  counter++;
+  var span = document.getElementById('sp');
+  span.IneerHTML=counter.toString();
 };
