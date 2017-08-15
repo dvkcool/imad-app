@@ -26,7 +26,7 @@ function createtemp(data){
         }
         
         else{
-            content.append(content);
+            content= content+ content;
         }
         
     }
