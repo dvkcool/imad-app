@@ -5,9 +5,9 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleOne{
-    title: 'Article One | IMAD';
-    heading: 'Article One';
+var articleOne={
+    title: 'Article One | IMAD',
+    heading: 'Article One',
     content: `
     <p> Hello aricle 1  Hello aricle 1 Hello aricle 1 Hello aricle 1 Hello aricle 1 Hello aricle 1 Hello aricle 1 Hello aricle 1 Hello aricle 1 Hello aricle 1
                   Hello aricle 1 Hello aricle 1 Hello aricle 1 Hello aricle 1 Hello aricle 1
@@ -19,7 +19,7 @@ var articleOne{
        
              <p> Hello aricle 1  Hello aricle 1 Hello aricle 1 Hello aricle 1 Hello aricle 1 Hello aricle 1 Hello aricle 1 Hello aricle 1 Hello aricle 1 Hello aricle 1
                   Hello aricle 1 Hello aricle 1 Hello aricle 1 Hello aricle 1 Hello aricle 1
-             </p> `;
+             </p> `
              
 };
 function createtemp(data){
