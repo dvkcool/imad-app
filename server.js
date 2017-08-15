@@ -9,23 +9,27 @@ var articleOne={
     title: 'Article One | IMAD',
     heading: 'Article One',
     content: `
-    <p> Hello aricle 1  Hello aricle 1 Hello aricle 1 Hello aricle 1 Hello aricle 1 Hello aricle 1 Hello aricle 1 Hello aricle 1 Hello aricle 1 Hello aricle 1
-                  Hello aricle 1 Hello aricle 1 Hello aricle 1 Hello aricle 1 Hello aricle 1
-             </p> 
-        
-             <p> Hello aricle 1  Hello aricle 1 Hello aricle 1 Hello aricle 1 Hello aricle 1 Hello aricle 1 Hello aricle 1 Hello aricle 1 Hello aricle 1 Hello aricle 1
-                  Hello aricle 1 Hello aricle 1 Hello aricle 1 Hello aricle 1 Hello aricle 1
-             </p> 
-       
-             <p> Hello aricle 1  Hello aricle 1 Hello aricle 1 Hello aricle 1 Hello aricle 1 Hello aricle 1 Hello aricle 1 Hello aricle 1 Hello aricle 1 Hello aricle 1
-                  Hello aricle 1 Hello aricle 1 Hello aricle 1 Hello aricle 1 Hello aricle 1
-             </p> `
+    Hello Article 1  `
              
 };
 function createtemp(data){
     var title=data.title;
     var heading=data.heading;
     var content= data.content;
+    var j=0;
+    for(var i =0; i<=100; i++){
+        if(i%20 ===0 && j%2 ===0){
+            content = content+'<P>';
+        }
+        else if(i%20 ===0){
+            content = content+'</P>'
+        }
+        
+        else{
+            content = content+content;
+        }
+        
+    }
     var htmltemp=`
                 <html>
                  <head>
