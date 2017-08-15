@@ -26,7 +26,7 @@ function createtemp(data){
         }
         
         else{
-            content= content+ ` `+content;
+            content= content+ `Hello Artcile 1`;
         }
         
     }
