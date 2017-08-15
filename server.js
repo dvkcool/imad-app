@@ -8,7 +8,7 @@ app.use(morgan('combined'));
 var articleOne={
     title: 'Article One | IMAD',
     heading: 'Article One',
-    content: ' Hello Article 1  '
+    content: ` Hello Article 1  `
 };
 function createtemp(data){
     var title=data.title;
@@ -17,11 +17,11 @@ function createtemp(data){
     var j=0;
     for(var i =0; i<=50; i++){
         if(i%10 ===0 && j%2 ===0){
-            content.append('<P>');
+            content = content + `<P>`;
             j++;
         }
         else if(i%10 ===0){
-            content.append('</P>');
+           content = content + `</P>`;
             j++;
         }
         
