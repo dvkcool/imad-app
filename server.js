@@ -19,10 +19,12 @@ function createtemp(data){
     var j=0;
     for(var i =0; i<=100; i++){
         if(i%20 ===0 && j%2 ===0){
-            content = content+'<P>';j++;
+            content = content+`<P>`;
+            j++;
         }
         else if(i%20 ===0){
-            content = content+'</P>'j++;
+            content = content+`</P>`;
+            j++;
         }
         
         else{
