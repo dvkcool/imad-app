@@ -18,13 +18,7 @@ function moveRight(){
 }
 var i=0;
 img.onclick = function () {
-    if(i%2===0){
-        var interval= setInterval(moveRight, 50);
-    }
- else{
-      img.style.marginLeft='100px';
- }
-   i++;
+var interval= setInterval(moveRight, 50);
 };
 var button = document.getElementById('b1');
 b1.onclick= function(){
