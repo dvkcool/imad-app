@@ -32,7 +32,7 @@ b1.onclick= function(){
             }
         }
     }
-    request.open('GET', 'divyanshukumarg.imad.hasura-app.io', true );
+    request.open('GET', 'divyanshukumarg.imad.hasura-app.io/counter', true );
     request.send(null);
   
 };
