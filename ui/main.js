@@ -32,5 +32,7 @@ b1.onclick= function(){
             }
         }
     }
+    request.open('GET', 'divyanshukumarg.imad.hasura-app.io', true );
+    request.send(null);
   
 };
