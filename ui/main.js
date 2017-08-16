@@ -20,10 +20,17 @@ img.onclick = function () {
    var interval= setInterval(moveRight, 50);
    
 };
-var counter=0;
 var button = document.getElementById('b1');
 b1.onclick= function(){
-  counter++;
-  var span = document.getElementById('sp');
-  span.innerHTML=counter.toString();
+    var request= new XMLHttpRequest();
+    request.onreadystatechange = function(){
+        if(request.readyState === XMLHttpRequest.DONE){
+            if(request.status==200){
+                var counter = request.responseText;
+               var span = document.getElementById('sp');
+               span.innerHTML=counter.toString();
+            }
+        }
+    }
+  
 };
