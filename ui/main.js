@@ -24,7 +24,7 @@ img.onclick = function () {
  else{
       img.style.marginLeft='100px';
  }
-   
+   i++;
 };
 var button = document.getElementById('b1');
 b1.onclick= function(){
