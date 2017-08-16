@@ -16,8 +16,14 @@ function moveRight(){
     }
  img.style.marginLeft=marginLeft+'px';
 }
+var i=0;
 img.onclick = function () {
-   var interval= setInterval(moveRight, 50);
+    if(i%2===0){
+        var interval= setInterval(moveRight, 50);
+    }
+ else{
+      img.style.marginLeft='100px';
+ }
    
 };
 var button = document.getElementById('b1');
