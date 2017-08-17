@@ -20,7 +20,7 @@ var articles={
         heading: 'Article Three',
         content: ` Hello Article 3  `
     }
-    }
+    };
 function createtemp(data){
     var title=data.title;
     var heading=data.heading;
@@ -68,6 +68,12 @@ function createtemp(data){
                 `;
                 return htmltemp;
 }
+var names=[];
+app.get('/submit-name/:name', function(req, res){
+   var name = req.params.name;
+   names.push(name);
+   res.send(JSON.stringify(names));
+});
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
