@@ -79,7 +79,7 @@ var articles={
                         <div><a href="/">Home</a>
                         </div>
                         <div>
-                        ${date.toDateString()}
+                        ${date}.toDateString();
                         <div>
                              <h1>${heading}</h1>   
                              <hr>
