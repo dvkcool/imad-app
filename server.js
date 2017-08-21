@@ -32,7 +32,7 @@ var articles={
     }
     };
     app.get('/test-db', function(req, res){
-   pool.query('Select * from article1', function(err, result){
+   pool.query('Select * from article', function(err, result){
        if(err){
            res.status(500).send(err.toSting());
        }else{
