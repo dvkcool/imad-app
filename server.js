@@ -43,29 +43,6 @@ var articles={
        }
    });
 });
-/*
-function createtemp(data){
-    var title=data.title;
-    var heading=data.heading;
-    var content= data.content;
-    var j=0;
-    var s = content;
-    for(var i =0; i<=50; i++){
-        if(i%10 ===0 && j%2 ===0){
-            content = content + `<P>`;
-            j++;
-        }
-        else if(i%10 ===0){
-           content = content + `</P>`;
-            j++;
-        }
-        
-        else{
-            content= content+ s;
-        }
-        
-    }
-    */
     function createtemp(data){
     var title=data.title;
     var heading=data.heading;
@@ -102,7 +79,7 @@ function createtemp(data){
                         <div><a href="/">Home</a>
                         </div>
                         <div>
-                        ${date}
+                        ${date.toDateString()}
                         <div>
                              <h1>${heading}</h1>   
                              <hr>
