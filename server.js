@@ -11,15 +11,7 @@ var config={
     password:process.env.DB_PASSWORD
 };
 var pool = new Pool(config);
-app.get('/test-db', function(req, res){
-   pool.query('Select * from article;', function(error, result){
-       if(error){
-           res.status(500).send(error.toSting());
-       }else{
-           res.send(JSON.stringfy(result));
-       }
-   });
-});
+
 var app = express();
 app.use(morgan('combined'));
 var articles={
@@ -39,6 +31,15 @@ var articles={
         content: ` Hello Article 3  `
     }
     };
+    app.get('/test-db', function(req, res){
+   pool.query('Select * from article;', function(error, result){
+       if(error){
+           res.status(500).send(error.toSting());
+       }else{
+           res.send(JSON.stringfy(result));
+       }
+   });
+});
 function createtemp(data){
     var title=data.title;
     var heading=data.heading;
