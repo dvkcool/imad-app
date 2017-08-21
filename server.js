@@ -32,8 +32,8 @@ var articles={
     }
     };
     app.get('/test-db', function(req, res){
-   pool.query('Select * from article5;', function(error, result){
-       if(error){
+   pool.query('Select * from article5;', function(err, result){
+       if(err){
            res.status(500).send(error.toSting());
        }else{
            res.send(JSON.stringify(result.rows));
