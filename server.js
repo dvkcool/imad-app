@@ -47,7 +47,7 @@ var articles={
     var title=data.title;
     var heading=data.heading;
     var content= data.content;
-    var date = data.date;
+    var date = data.date.toDateString();
     var j=0;
     var s = content;
     for(var i =0; i<=50; i++){
@@ -79,7 +79,7 @@ var articles={
                         <div><a href="/">Home</a>
                         </div>
                         <div>
-                        ${date}.toDateString();
+                        ${date}
                         <div>
                              <h1>${heading}</h1>   
                              <hr>
