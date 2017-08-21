@@ -43,10 +43,34 @@ var articles={
        }
    });
 });
+/*
 function createtemp(data){
     var title=data.title;
     var heading=data.heading;
     var content= data.content;
+    var j=0;
+    var s = content;
+    for(var i =0; i<=50; i++){
+        if(i%10 ===0 && j%2 ===0){
+            content = content + `<P>`;
+            j++;
+        }
+        else if(i%10 ===0){
+           content = content + `</P>`;
+            j++;
+        }
+        
+        else{
+            content= content+ s;
+        }
+        
+    }
+    */
+    function createtemp(data){
+    var title=data.title;
+    var heading=data.heading;
+    var content= data.content;
+    var date = data.date;
     var j=0;
     var s = content;
     for(var i =0; i<=50; i++){
@@ -113,7 +137,7 @@ res.send(createtemp(articles[articleName]));
 });
 */
 app.get('/article/:articleName', function (req, res) {
- pool.query("select title, heading, date, content from article where title='"+req.params.articleName+"'", function(err, result){
+ pool.query("select title, heading, content, date from article where title='"+req.params.articleName+"'", function(err, result){
     if(err){
            res.status(500).send(err.toSting());
        }else{
