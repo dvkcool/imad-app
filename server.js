@@ -18,16 +18,19 @@ var articles={
   'article-One': {
         title: 'Article One | IMAD',
         heading: 'Article One',
+        date: 'September 5 2017',
         content: ` Hello Article 1  `
     },
     'article-Two': {
         title: 'Article Two | IMAD',
         heading: 'Article Two',
+         date: 'September 5 2017',
         content: ` Hello Article 2  `
     },
     'article-Three': {
         title: 'Article Three | IMAD',
         heading: 'Article Three',
+         date: 'September 5 2017',
         content: ` Hello Article 3  `
     }
     };
@@ -75,6 +78,8 @@ function createtemp(data){
                         <div><a href="/">Home</a>
                         </div>
                         <div>
+                        ${date}
+                        <div>
                              <h1>${heading}</h1>   
                              <hr>
                         </div>
@@ -108,7 +113,13 @@ res.send(createtemp(articles[articleName]));
 });
 */
 app.get('/article/:articleName', function (req, res) {
- var articleName= req.params.articleName;
+ pool.query('select title, heading, date, content from article'+req.params.articleName, function(err, result){
+    if(err){
+           res.status(500).send(err.toSting());
+       }else{
+           res.send(JSON.stringify(result.rows));
+       }
+ });
 res.send(createtemp(articles[articleName]));
 });
 app.get('/ui/style.css', function (req, res) {
