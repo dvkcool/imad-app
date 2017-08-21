@@ -113,7 +113,7 @@ res.send(createtemp(articles[articleName]));
 });
 */
 app.get('/article/:articleName', function (req, res) {
- pool.query("select title, heading, date, content from article where title='"+req.params.articleName+"';", function(err, result){
+ pool.query("select title, heading, date, content from article where title='"+req.params.articleName+"'", function(err, result){
     if(err){
            res.status(500).send(err.toSting());
        }else{
