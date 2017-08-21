@@ -32,7 +32,7 @@ var articles={
     }
     };
     app.get('/test-db', function(req, res){
-   pool.query('Select * from article;', function(error, result){
+   pool.query('Select * from article5;', function(error, result){
        if(error){
            res.status(500).send(error.toSting());
        }else{
@@ -101,7 +101,13 @@ app.get('/counter', function(req, res){
    counter++;
    res.send(counter.toString());
 });
+/*
 app.get('/:articleName', function (req, res) {
+ var articleName= req.params.articleName;
+res.send(createtemp(articles[articleName]));
+});
+*/
+app.get('/article/:articleName', function (req, res) {
  var articleName= req.params.articleName;
 res.send(createtemp(articles[articleName]));
 });
