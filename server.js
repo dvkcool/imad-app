@@ -34,7 +34,7 @@ var articles={
     app.get('/test-db', function(req, res){
    pool.query('Select * from article5;', function(err, result){
        if(err){
-           res.status(500).send(error.toSting());
+           res.status(500).send(err.toSting());
        }else{
            res.send(JSON.stringify(result.rows));
        }
