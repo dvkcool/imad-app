@@ -36,7 +36,7 @@ var articles={
        if(error){
            res.status(500).send(error.toSting());
        }else{
-           res.send(JSON.stringify(result));
+           res.send(JSON.stringify(result.rows));
        }
    });
 });
