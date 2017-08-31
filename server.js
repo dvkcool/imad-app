@@ -2,7 +2,7 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var Pool = require('pg').Pool;
-
+var crypto = require('crypto');
 var config={
     user:'divyanshukumarg',
     database:'divyanshukumarg',
@@ -43,6 +43,10 @@ var articles={
        }
    });
 });
+function hash(input, salt){
+    var hashed = crypto.pbkdf2Sync(input, salt, 10000, 512, 'sha512');
+    return hashed;
+}
     function createtemp(data){
     var title=data.title;
     var heading=data.heading;
@@ -113,6 +117,10 @@ app.get('/:articleName', function (req, res) {
 res.send(createtemp(articles[articleName]));
 });
 */
+app.get('/hash/:input1', function (req, res) {
+var hashed = hash(req.params.input1, 'some-random-string');
+res.send(hashed.toString());
+});
 app.get('/article/:articleName', function (req, res) {
  pool.query("select title, heading, content, date from article where title= $1", [req.params.articleName], function(err, result){
     if(err){
