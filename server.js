@@ -119,7 +119,7 @@ res.send(createtemp(articles[articleName]));
 */
 app.get('/hash/:input1', function (req, res) {
 var hashed = hash(req.params.input1, 'some-random-string');
-res.send(hashed.toString());
+res.send(hashed.toString('hex'));
 });
 app.get('/article/:articleName', function (req, res) {
  pool.query("select title, heading, content, date from article where title= $1", [req.params.articleName], function(err, result){
