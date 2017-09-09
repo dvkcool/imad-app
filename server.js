@@ -107,7 +107,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 app.get('/upload', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'app.js'));
+  res.sendFile(path.join(__dirname, 'app.js'));
 });
 var counter=0;
 app.get('/counter', function(req, res){
