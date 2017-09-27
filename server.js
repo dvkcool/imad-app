@@ -113,7 +113,7 @@ app.get('/counter', function(req, res){
    res.send(counter.toString());
 });
 
-app.get('/article/:articleName', function (req, res) {
+app.get('/:articleName', function (req, res) {
  var articleName= req.params.articleName;
 res.send(createtemp(articles[articleName]));
 });
