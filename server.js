@@ -106,20 +106,18 @@ app.get('/submit-name', function(req, res){
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-app.get('/upload', function (req, res) {
-  res.sendFile(path.join(__dirname, 'app.js'));
-});
+
 var counter=0;
 app.get('/counter', function(req, res){
    counter++;
    res.send(counter.toString());
 });
-/*
-app.get('/:articleName', function (req, res) {
+
+app.get('/article/:articleName', function (req, res) {
  var articleName= req.params.articleName;
 res.send(createtemp(articles[articleName]));
 });
-*/
+
 app.get('/hash/:input1', function (req, res) {
 var hashed = hash(req.params.input1, 'some-random-string');
 res.send(hashed.toString('hex'));
