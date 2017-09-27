@@ -113,11 +113,6 @@ app.get('/counter', function(req, res){
    res.send(counter.toString());
 });
 
-app.get('/:articleName', function (req, res) {
- var articleName= req.params.articleName;
-res.send(createtemp(articles[articleName]));
-});
-
 app.get('/hash/:input1', function (req, res) {
 var hashed = hash(req.params.input1, 'some-random-string');
 res.send(hashed.toString('hex'));
